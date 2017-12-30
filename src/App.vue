@@ -2,16 +2,13 @@
   <div id="app">
     <root-header></root-header>
     <div class="container">
-      <header class="page-header">
-        <h2>Olá</h2>
-      </header>
+      <router-view/>
     </div>
-    <router-view/>
   </div>
 </template>
 
 <script>
-import rootHeader from './components/root/rootHeader'
+import rootHeader from './components/root/header'
 export default {
   name: 'app',
   components: {
