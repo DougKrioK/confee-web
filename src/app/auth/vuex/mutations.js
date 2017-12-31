@@ -1,8 +1,9 @@
+import * as types from './mutations-types'
 export default {
-  setUser(state, user){
+  [types.setUser] (state, user){
     state.user = user
   },
-  setToken(state, token){
+  [types.setToken] (state, token){
     state.token = token
   }
 }

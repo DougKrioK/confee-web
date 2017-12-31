@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import { isEmpty } from 'lodash'
 export default {
   data () {
@@ -28,9 +29,12 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['attemptLogin']),
     doLogin () {
       const user = this.user
-      this.$store.dispatch('attemptLogin', {...user})
+
+      // repasso o usuário pro vuex
+      this.attemptLogin({...user})
         .then(() => {
           this.$router.push('/')
         })

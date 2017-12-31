@@ -7,6 +7,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" :class="{ in: isOpen }" id="bs-example-navbar-collapse-1">
         <left/>
+        <right/>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -14,12 +15,14 @@
 
 <script>
 import left from './left'
+import right from './right'
 import brand from './brand'
 export default {
   name: 'confee-header',
   components: {
     left,
-    brand
+    brand,
+    right
   },
   data () {
     return {
